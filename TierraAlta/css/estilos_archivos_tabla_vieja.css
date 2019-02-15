@@ -1,0 +1,418 @@
+	.cuadroPrincipal{
+		display: none !important;
+	}
+	.contenedor_archivo{
+	float: right;
+	width: 79%;
+	margin-top: 5.5%;
+}
+#MenuDatosUsuario{
+	font-size: 15px;
+}
+.divInsertar{
+	text-align: center;
+	padding: 20px;
+}
+.divInsertar a{
+	text-decoration: none;
+	color: #fff;
+	
+	border-radius: 100%;
+	font-weight: bold;
+	font-size: 40px;
+	
+	opacity: 0.7;
+}
+.divInsertar a:hover{
+	-webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+  	box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+}
+
+.divInsertar  a:nth-child(1){
+	background: green;
+	padding: 10px 20px;
+}
+.divInsertar a:nth-child(2) {
+	background: rgba(62,148,236, 1);
+	box-sizing: border-box;
+	padding: 6px 10px 14px 10px;
+}
+.divInsertar a:nth-child(2) img{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+
+#Modal_insertar,#Modal_Modificar{
+	position: fixed;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 100;
+	opacity:0;
+	-webkit-transition:  0s;
+    -moz-transition:  0s;
+	transition:  0s;
+	pointer-events: none;
+	color: #fff;
+}
+#Modal_insertar:target,#Modal_Modificar:target {
+	-webkit-transition:  0.2s ease-in;
+	-moz-transition:  0.2s ease-in;
+	transition:  0.2s ease-in;
+	opacity:1;
+	pointer-events: auto;
+}
+.FormInsertar{
+	box-sizing: border-box;
+	width: 50%;
+	position: relative;
+	left: 50%;
+	margin-left: -25%;
+	margin-top: 5%;
+	background: #ffffff;
+	-webkit-box-shadow: 1px 1px 15px 2px rgba(0,0,0,0.7);
+       -moz-box-shadow: 1px 1px 15px 2px rgba(0,0,0,0.7);
+  			box-shadow: 1px 1px 15px 2px rgba(0,0,0,0.7);
+  	border-radius: 10px;
+}
+.FormModificar{
+	position: relative;
+	width: 60%;
+	left: 50%;
+	margin-left: -30%;
+	box-shadow: 1px 1px 15px 2px rgba(0,0,0,0.2);
+	margin-top: 5%;
+}
+.TituloModalRegistro{
+	text-align: center;
+	
+	width: 100%;
+	font-size: 30px;
+	color: rgba(0,0,0,0.5);
+	padding:15px;
+	box-sizing: border-box;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+.FormInsertar input,.FormModificar input{
+	width: 40%;
+	margin-left:6%;
+	margin-top: 15px;
+	box-sizing: border-box;
+	font-size: 15px;
+	padding: 10px;
+	display:inline-block;
+	border: 1px solid rgba(0,0,0,0.3);
+	background: transparent;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);	
+}
+.FormModificar input{
+	margin: 0;
+	margin-left: -5px;
+}
+.FormModificar .DivInput{
+	margin: 0;
+	text-align: center;
+	margin-top: 10px;
+}
+.FormModificar .DivInput p{
+	background: #efefef;
+	box-sizing: border-box;
+	color: rgba(0,0,0,1);
+	padding: 10px 20px;
+	font-size: 18px;
+	width: 200px;
+	display: inline-block;
+	margin: 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	text-align: left;
+}
+.FormInsertar .caja_botones,.FormModificar .caja_botones{
+	border-top: 2px solid rgba(0,0,0,0.1);
+	margin: 30px 0px 0px 0px;
+}
+.FormInsertar .btnRegistrar, .FormInsertar .btnBorrar,
+.FormModificar .btnRegistrar {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 40%;
+    margin-left: 6%;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.FormInsertar .btnRegistrar,.FormModificar .btnRegistrar{
+	background: #4cb1ff;
+	border: 2px solid #4cb1ff;
+}
+.FormModificar .btnRegistrar{
+	position: relative;
+	width: 50%;
+	margin-left: -25%;
+	left: 50%;
+}
+.FormInsertar .btnBorrar,.FormModificar .btnBorrar{
+	border: 2px solid rgba(255,0,0,0.4);
+	background: transparent;
+	color: rgba(255,0,0,0.4);
+}
+.FormInsertar .btnRegistrar:hover, .FormInsertar .btnBorrar:hover,
+.FormModificar .btnRegistrar:hover, .FormModificar .btnBorrar:hover{
+    -webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+       -moz-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+  			box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+}
+.Cerrar {
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	text-align: right;
+	font-size: 30px;
+	color: #ffffff;
+	padding: 10px;
+	font-weight: bold;
+	text-decoration:none;
+}
+/*FIN BOTON INSERTAR*/
+.form_buscar{
+	text-align:right;
+	padding-right: 15px;
+}
+.form_buscar span{
+	float: left;
+	padding: 7px 30px;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(0,0,0,0.5);
+}
+.form_inputText{
+	font-size: 15px;
+	font-weight: bold;
+	color: rgba(0,0,0,1);
+	border: 1px solid rgba(0,0,0,0.3);
+	background: transparent;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	background: url("../IMAGEN/buscar.svg") no-repeat scroll 0 0 transparent;
+	background-size: 50px 50px;
+	padding: 2px 2px 2px 50px;
+	height: 50px;
+}
+.btnBuscar{
+	color: white;
+	background: #4cb1ff;
+	border: 2px solid #4cb1ff;
+	font-size: 17px;
+	box-sizing: border-box;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+	
+}
+.btnBuscar:hover{
+	-webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+  	box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.3);
+}
+.tabla_menu {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: auto;
+  padding:5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  position: relative;
+  left: 50%;
+  margin-left: -47.5%;
+  margin-top: 1%;
+}
+ 
+th {
+  color:#fff;
+  background-color: #3e94ec;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid rgba(255,255,255,0.5);
+  font-size:20px;
+  font-weight: 100;
+  padding:10px 20px;
+  text-align:left;
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  color:#666B85;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:rgba(78,80,102, 0.7) !important;
+}
+tr:hover .ColorHoverTD{
+	color: white;
+}
+td {
+  background:#FFFFFF;
+  padding:10px 20px;
+  text-align:left;
+  vertical-align:middle;
+  
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+td:last-child{
+  border-right: none;
+}
+tr:last-child{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.tableTR2 td{
+	background: #fff !important;
+}
+.botonModificar{
+	color: #fff;
+	background-color: #f0ad4e;
+	border-color: #eea236;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	letter-spacing: 0.5px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.botonModificar:hover{
+	opacity: 0.9;
+}
+.botonEliminar{
+	color: #fff;
+	background-color: rgba(255, 0, 0, 0.7);
+	border-color: #eea236;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	letter-spacing: 0.5px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.botonEliminar:hover{
+	opacity: 0.9;
+}
+
+/*ESTILOS BOTONES EDITAR Y ELIMINAR CON IMAGENES*/
+.cuadroRubro{
+	
+	
+	
+	display: inline-block;
+	padding: 10px 50px;
+	
+	position: relative;
+	box-sizing: border-box;
+	
+}
+.acciones{
+	text-align: center;
+	margin: 0;
+	margin-top: -14%;
+	margin-left: -1%;
+	
+	
+	padding: 5px 1px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.acciones a{
+	display: inline-block;
+
+}
+.acciones a img{
+	vertical-align: top;
+	width: 30px;
+	height: 30px;
+	opacity: 0.7;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	padding: 5px 4px;
+}
+.acciones a img:hover{
+	opacity: 1;
+}
+
+.cuadroRubro:hover .acciones{
+	display: block;
+}
+.cuadroR bro:hover span{
+	position: absolute;
+}
+td{
+	text-align: center !important;
+}
+.seleccionado{
+	background:rgba(255,255,255,0.2) !important;
+	border-left: 5px solid #4cb1ff !important;
+}
+.rotarImagen{
+	-ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
